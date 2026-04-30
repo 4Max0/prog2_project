@@ -9,15 +9,12 @@ public class App {
 		return System.getProperty("java.version");
 	}
 
-	public String testSpotless() {return "I'm using spotless!!";}
+	public String testSpotless() {String a="I'm u";String b="sing spotless!!" ;return a+b;}
 
 	public static void main(String[] args) {
-		App a =
-                new App();
-		System.out.println(
-                a.getGreeting());
-		System.
-                out.println(a.getJavaVersion());
+		App a = new App();
+		System.out.println(a.getGreeting());
+		System.out.println(a.getJavaVersion());
 		System.out.println(a.testSpotless());
 	}
 }
