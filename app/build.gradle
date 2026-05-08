@@ -57,17 +57,10 @@ spotless {
 		endWithNewline()
 	}
 	java {
-		// don't need to set target, it is inferred from java
+		// NOTE: don't need to set target, it is inferred from java
 
-		// NOTE: google-java-format supported nicht JRE 25
-		//// apply a specific flavor of google-java-format
-		//googleJavaFormat('1.23.0').aosp().reflowLongStrings().skipJavadocFormatting()
-		eclipse()
-		// fix formatting of type annotations
-		formatAnnotations()
-		// make sure every file has the following copyright header.
-		// optionally, Spotless can set copyright years by digging
-		// through git history (see "license" section below)
-		licenseHeader '/* (C)$YEAR */'
+		googleJavaFormat()
+		formatAnnotations() 			// fix formatting of type annotations
+		licenseHeader '/* (C)$YEAR */' 	// make sure every file has the following copyright header
 	}
 }
